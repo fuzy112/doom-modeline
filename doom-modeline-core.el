@@ -697,6 +697,13 @@ Including `evil', `overwrite', `god', `ryo' and `xah-fly-keys', etc."
   :type 'boolean
   :group 'doom-modeline)
 
+(defcustom doom-modeline-dired-async t
+  "Whether display the dired async job status.
+
+It requires `dired-async' package (from `emacs-async')."
+  :type 'boolean
+  :group 'doom-modeline)
+
 (defcustom doom-modeline-mu4e nil
   "Whether display the mu4e notifications.
 

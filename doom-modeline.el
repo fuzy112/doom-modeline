@@ -89,7 +89,7 @@
 
 (doom-modeline-def-modeline 'main
   '(eldoc bar window-state workspace-name window-number modals matches follow buffer-info remote-host buffer-position word-count parrot selection-info)
-  '(compilation objed-state misc-info project-name persp-name battery grip irc mu4e gnus github debug repl lsp spell minor-modes input-method indent-info buffer-encoding major-mode process vcs check time))
+  '(compilation dired-async objed-state misc-info project-name persp-name battery grip irc mu4e gnus github debug repl lsp spell minor-modes input-method indent-info buffer-encoding major-mode process vcs check time))
 
 (doom-modeline-def-modeline 'minimal
   '(bar window-number modals matches buffer-info-simple)
@@ -97,31 +97,31 @@
 
 (doom-modeline-def-modeline 'special
   '(eldoc bar window-state window-number modals matches buffer-info remote-host buffer-position word-count parrot selection-info)
-  '(compilation objed-state misc-info battery irc-buffers debug minor-modes input-method indent-info buffer-encoding major-mode process time))
+  '(compilation dired-async objed-state misc-info battery irc-buffers debug minor-modes input-method indent-info buffer-encoding major-mode process time))
 
 (doom-modeline-def-modeline 'project
   '(bar window-number modals buffer-default-directory remote-host buffer-position)
-  '(compilation misc-info battery irc mu4e gnus github debug minor-modes input-method major-mode process time))
+  '(compilation dired-async misc-info battery irc mu4e gnus github debug minor-modes input-method major-mode process time))
 
 (doom-modeline-def-modeline 'dashboard
   '(bar window-number modals buffer-default-directory-simple remote-host)
-  '(compilation misc-info battery irc mu4e gnus github debug minor-modes input-method major-mode process time))
+  '(compilation dired-async misc-info battery irc mu4e gnus github debug minor-modes input-method major-mode process time))
 
 (doom-modeline-def-modeline 'vcs
   '(bar window-state window-number modals matches buffer-info remote-host buffer-position parrot selection-info)
-  '(compilation misc-info battery irc mu4e gnus github debug minor-modes buffer-encoding major-mode process time))
+  '(compilation dired-async misc-info battery irc mu4e gnus github debug minor-modes buffer-encoding major-mode process time))
 
 (doom-modeline-def-modeline 'package
   '(bar window-number modals matches package buffer-position parrot)
-  '(compilation misc-info major-mode process time))
+  '(compilation dired-async misc-info major-mode process time))
 
 (doom-modeline-def-modeline 'info
   '(bar window-number modals matches buffer-info info-nodes buffer-position parrot selection-info)
-  '(compilation misc-info buffer-encoding major-mode time))
+  '(compilation dired-async misc-info buffer-encoding major-mode time))
 
 (doom-modeline-def-modeline 'media
   '(bar window-number modals buffer-size buffer-info)
-  '(compilation misc-info media-info major-mode process vcs time))
+  '(compilation dired-async misc-info media-info major-mode process vcs time))
 
 (doom-modeline-def-modeline 'message
   '(eldoc bar window-state window-number modals matches buffer-info-simple buffer-position word-count parrot selection-info)

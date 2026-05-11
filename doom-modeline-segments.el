@@ -125,6 +125,7 @@
 (declare-function anzu--where-is-here "ext:anzu")
 (declare-function async-inject-variables "ext:async")
 (declare-function async-start "ext:async")
+(declare-function dired-async-processes "ext:dired-async")
 (declare-function avy-traverse "ext:avy")
 (declare-function avy-tree "ext:avy")
 (declare-function aw-update "ext:ace-window")
@@ -3500,6 +3501,25 @@ When the svg library is not available, return nil."
                    (make-mode-line-mouse-map
                     'mouse-2
                     #'compilation-goto-in-progress-buffer))))
+
+;;
+;; Dired-Async
+;;
+
+(doom-modeline-def-segment dired-async
+  "The dired async job status."
+  (when (and doom-modeline-dired-async
+             (bound-and-true-p dired-async--modeline-mode))
+    (let ((count (length (dired-async-processes))))
+      (when (> count 0)
+        (concat
+         (doom-modeline-spc)
+         (propertize
+          (format "Async(%d)" count)
+          'face (doom-modeline-face 'doom-modeline-compilation)
+          'help-echo (format "%d dired async job(s) running" count)
+          'mouse-face 'doom-modeline-highlight)
+         (doom-modeline-spc))))))
 
 ;;
 ;; Eldoc
